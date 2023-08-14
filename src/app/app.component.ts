@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import gsap from "gsap";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio';
+
+
+  ngAfterViewInit():void{
+    gsap.from('.animation', {duration: 1, x: -100, ease: "power4"})
+  }
 }
