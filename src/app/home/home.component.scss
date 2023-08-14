@@ -1,13 +1,14 @@
 .skill-icon{
     aspect-ratio: 1/1;
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     object-fit: contain;
 }
 
 @media only screen and (min-width: 991px) {
     .skill-icon {
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      height: 90px;
     }
   }
+
