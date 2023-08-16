@@ -7,48 +7,62 @@
             <button href="" class="rounded-lg font-bold text-[#121212] px-5 py-3 bg-[#BA3D5C] hover:bg-[#F67695] ease-in duration-100">Contact</button>
         </div>
     </div>
-
+<!-- 
     <div class="#FF5943">
-        <!-- <iframe src='https://my.spline.design/miniroomartcopy-7b53ed916451fba02d51213503895c65/' fram='0' width='100%' height='100%'></iframe> -->
+        <iframe src='https://my.spline.design/miniroomartcopy-7b53ed916451fba02d51213503895c65/' fram='0' width='100%' height='100%'></iframe>
+    </div> -->
+</div>
+
+
+
+
+<section class="bg-[#BA3D5C] py-40 mb-40">
+    <div class="text-center mb-20">
+        <h2 class="lg:text-6xl text-5xl font-black text-white mvp">MOST VALUABLE SKILLS</h2>
     </div>
-</div>
-
-
-
-
-<div class="text-center mb-40">
-    <h2 class="lg:text-5xl text-5xl font-black text-white mvp">MOST VALUABLE SKILLS</h2>
-</div>
-
-<!-- My Skills -->
-<div class="flex justify-center">
-    <div class="container grid lg:grid-cols-5 grid-cols-2 gap-0">
-        <div class="text-center mb-20 p-0 hover:scale-125 ease-in duration-200" *ngFor="let skill of skills">
-            <div class="wrap flex justify-center items-center">
-                <img src="{{skill.attributes.SkillIcon.data.attributes.url}}" alt="" class="skill-icon mb-6">
+    
+    <!-- My Skills -->
+    <div class="flex justify-center">
+        <div class="container grid lg:grid-cols-5 grid-cols-2 gap-x-0 gap-y-20">
+            <div class="text-center hover:scale-125 ease-in duration-200" *ngFor="let skill of skills">
+                <div class="wrap flex justify-center items-center">
+                    <img src="{{skill.attributes.SkillIcon.data.attributes.url}}" alt="" class="skill-icon mb-6">
+                </div>
+                <p class="font-bold text-lg text-white">{{skill.attributes.SkillName}}</p>
             </div>
-            <p class="font-bold text-lg text-white">{{skill.attributes.SkillName}}</p>
         </div>
     </div>
+</section>
+
+<div class="text-center mb-20">
+    <h2 class="lg:text-6xl text-5xl font-black text-white mvp">PROJECTS</h2>
 </div>
 
 <!-- Projects -->
-<div class="flex justify-center">
-    <div class="container grid lg:grid-cols-3 grid-cols-1">
-        <div class="project border">
-            <div class="wrap mb-10">
-                <img class="project-img" src="" alt="">
+<section class="flex justify-center">
+    <div class="container grid lg:grid-cols-3 grid-cols-1 gap-16">
+        <div class="project mb-16 bg-[#2c2c2c]" *ngFor="let project of projects">
+            <div class="wrap">
+                <img class="project-img" src="{{project.attributes.ProjectLogo.data.attributes.url}}" alt="">
             </div>
     
-            <div class="project-information">
-                <h3 class="project-name text-white text-3xl font-bold mb-6">Mike Smooth</h3>
-                <p class="text-white">This is a short description about the project</p>
+            <div class="project-information p-8 grid grid-cols-3">
+               <div class="wrap col-span-2">
+                    <h3 class="project-name text-white text-3xl font-bold mb-6">{{project.attributes.ProjectTitle}}</h3>
+                    <p class="text-white">{{project.attributes.ProjectDescription}}</p>
+               </div>
+               <div class="flex items-center justify-end">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="white" class="w-16 h-16 hover:stroke-black hover:fill-white duration-200 ease">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+               </div>
             </div>
         </div>
+
     
 
     </div>
-</div>
+</section>
 
 
 

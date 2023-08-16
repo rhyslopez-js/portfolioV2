@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { HttpClient } from '@angular/common/http';
 import { Skills } from '../interfaces/skills.interface';
+import { Projects } from '../interfaces/projects.interface';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,7 @@ import { Skills } from '../interfaces/skills.interface';
 export class HomeComponent {
 
   skills:any[] = []
+  projects:any[]=[]
   imgURL:string = ""
  
 
@@ -22,10 +24,15 @@ export class HomeComponent {
     // Skills API
     this.http.get<Skills>('http://cms.rhyslopez.com/api/skills?populate=*').subscribe(response=>{
       this.skills = response.data
-      console.log(this.skills[0].attributes.SkillName)
-      console.log(this.skills[0].attributes.SkillIcon.data.attributes.formats.url)
+      // console.log(this.skills[0].attributes.SkillName)
+      // console.log(this.skills[0].attributes.SkillIcon.data.attributes.formats.url)
     })
 
+    // Projects API
+    this.http.get<Projects>('http://cms.rhyslopez.com/api/projects?populate=*').subscribe(response=>{
+      this.projects = response.data
+      console.log(this.projects[0].attributes.ProjectTitle)
+    })
 
 
     // GSAP ANIMATIONS

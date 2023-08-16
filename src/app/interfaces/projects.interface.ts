@@ -1,9 +1,8 @@
-
 export interface Projects{
     data:[
         {attributes:{
-            SkillName:string
-            SkillIcon:{
+            ProjectTitle:string
+            ProjectDescription:{
                 attributes:{
                     url:string
                 }
