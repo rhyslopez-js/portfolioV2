@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/all';
 import { HttpClient } from '@angular/common/http';
 import { Skills } from '../interfaces/skills.interface';
 import { Projects } from '../interfaces/projects.interface';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ export class HomeComponent {
   skills:any[] = []
   projects:any[]=[]
   imgURL:string = ""
+  serverURL:string = environment.server
  
 
   constructor(private http:HttpClient){}
@@ -22,14 +24,14 @@ export class HomeComponent {
   ngAfterViewInit(): void{
 
     // Skills API
-    this.http.get<Skills>('http://cms.rhyslopez.com/api/skills?populate=*').subscribe(response=>{
+    this.http.get<Skills>(this.serverURL + '/api/skills?populate=*').subscribe(response=>{
       this.skills = response.data
       // console.log(this.skills[0].attributes.SkillName)
       // console.log(this.skills[0].attributes.SkillIcon.data.attributes.formats.url)
     })
 
     // Projects API
-    this.http.get<Projects>('http://cms.rhyslopez.com/api/projects?populate=*').subscribe(response=>{
+    this.http.get<Projects>(this.serverURL + '/api/projects?populate=*').subscribe(response=>{
       this.projects = response.data
       console.log(this.projects[0].attributes.ProjectTitle)
     })

@@ -1,0 +1,5 @@
+### skills icons
+GET cms.rhyslopez.com/api/skills?populate=*
+
+### projects
+GET cms.rhyslopez.com/api/projects?populate=*
