@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/all';
 import { HttpClient } from '@angular/common/http';
 import { Skills } from '../interfaces/skills.interface';
 import { Projects } from '../interfaces/projects.interface';
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/environment.dev';
 
 @Component({
   selector: 'app-home',
