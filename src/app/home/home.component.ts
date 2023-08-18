@@ -26,8 +26,6 @@ export class HomeComponent {
     // Skills API
     this.http.get<Skills>(this.serverURL + '/api/skills?populate=*').subscribe(response=>{
       this.skills = response.data
-      // console.log(this.skills[0].attributes.SkillName)
-      // console.log(this.skills[0].attributes.SkillIcon.data.attributes.formats.url)
     })
 
     // Projects API
@@ -49,6 +47,7 @@ export class HomeComponent {
     });
     tl.from(fadeElement, {
       opacity: 0,
+      x: -1000
     });
     // Add the fade-in animation to the timeline
     tl.to(fadeElement, {

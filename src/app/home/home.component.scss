@@ -1,3 +1,11 @@
+.all{
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-area{
+  scroll-snap-align: start;
+}
+
 .skill-icon{
     aspect-ratio: 1/1;
     width: 90px;
@@ -18,3 +26,4 @@
   background-color: white;
   width: 100%;
 }
+
