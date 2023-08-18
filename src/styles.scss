@@ -28,3 +28,17 @@ body{
 .custom-shape-divider-top-1691772446 .shape-fill {
     fill: #FFFFFF;
 }
+
+@media only screen and (max-width: 1384px) {
+
+    .desktop-header{
+      display: none;
+    }
+
+}
+
+@media only screen and (min-width: 1385px) {
+  .mobile-nav{
+    display: none;
+  }
+}
