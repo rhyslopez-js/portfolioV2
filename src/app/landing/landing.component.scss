@@ -1,0 +1,13 @@
+// .left-section{
+//     // clip-path: polygon(0 0, 61% 0, 86% 100%, 0% 100%);
+// }
+
+.right-section{
+    clip-path: none
+}
+
+@media only screen and (min-width: 992px) {
+    .right-section {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+    }
+  }
